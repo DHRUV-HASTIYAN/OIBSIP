@@ -1,0 +1,317 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===========================
+   GLOBAL STYLES
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#5B21B6,#2563EB,#06B6D4);
+    padding:20px;
+}
+
+/* ===========================
+   MAIN CONTAINER
+=========================== */
+
+.container{
+
+    width:950px;
+    max-width:100%;
+    display:flex;
+    overflow:hidden;
+    border-radius:20px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(18px);
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+    animation:fadeIn .8s ease;
+}
+
+/* ===========================
+   LEFT SECTION
+=========================== */
+
+.left{
+
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:45px;
+    color:white;
+}
+
+.thermometer{
+
+    font-size:130px;
+    margin-bottom:25px;
+    animation:float 3s ease-in-out infinite;
+}
+
+.left h1{
+
+    font-size:2.3rem;
+    margin-bottom:18px;
+    text-align:center;
+}
+
+.left p{
+
+    text-align:center;
+    line-height:1.8;
+    max-width:300px;
+    opacity:.95;
+}
+
+/* ===========================
+   RIGHT SECTION
+=========================== */
+
+.right{
+
+    flex:1;
+    background:white;
+    padding:40px;
+}
+
+.right h2{
+
+    text-align:center;
+    margin-bottom:25px;
+    color:#333;
+}
+
+/* ===========================
+   INPUT
+=========================== */
+
+.input-group{
+
+    margin-bottom:20px;
+}
+
+label{
+
+    display:block;
+    margin-bottom:8px;
+    color:#444;
+    font-weight:600;
+}
+
+input,
+select{
+
+    width:100%;
+    padding:13px;
+    border:2px solid #ddd;
+    border-radius:10px;
+    font-size:16px;
+    transition:.3s;
+}
+
+input:focus,
+select:focus{
+
+    outline:none;
+    border-color:#2563EB;
+    box-shadow:0 0 10px rgba(37,99,235,.2);
+}
+
+/* ===========================
+   ERROR MESSAGE
+=========================== */
+
+#error{
+
+    min-height:22px;
+    text-align:center;
+    color:#dc2626;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.buttons{
+
+    display:flex;
+    gap:15px;
+}
+
+button{
+
+    flex:1;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:first-child{
+
+    background:linear-gradient(135deg,#5B21B6,#2563EB);
+    color:white;
+}
+
+.reset-btn{
+
+    background:#e5e7eb;
+    color:#333;
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+}
+
+button:first-child:hover{
+
+    box-shadow:0 8px 20px rgba(37,99,235,.35);
+}
+
+.reset-btn:hover{
+
+    background:#d1d5db;
+}
+
+/* ===========================
+   RESULT
+=========================== */
+
+.result{
+
+    margin-top:30px;
+    background:#EEF4FF;
+    padding:20px;
+    border-radius:12px;
+}
+
+.result h3{
+
+    text-align:center;
+    margin-bottom:18px;
+    color:#333;
+}
+
+.result p{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:white;
+    padding:12px 16px;
+    border-radius:8px;
+    margin-bottom:10px;
+    font-weight:600;
+    color:#2563EB;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:850px){
+
+.container{
+
+    flex-direction:column;
+}
+
+.left{
+
+    padding:35px;
+}
+
+.left h1{
+
+    font-size:2rem;
+}
+
+.left p{
+
+    max-width:100%;
+}
+
+.thermometer{
+
+    font-size:90px;
+}
+
+.right{
+
+    padding:30px;
+}
+
+.buttons{
+
+    flex-direction:column;
+}
+
+.result p{
+
+    flex-direction:column;
+    gap:5px;
+    text-align:center;
+}
+
+}

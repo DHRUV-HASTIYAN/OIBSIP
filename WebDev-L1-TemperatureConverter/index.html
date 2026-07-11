@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Temperature Converter</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= MAIN CONTAINER ================= -->
+
+<div class="container">
+
+    <!-- ================= LEFT SECTION ================= -->
+
+    <div class="left">
+
+        <div class="thermometer">🌡️</div>
+
+        <h1>Temperature Converter</h1>
+
+        <p>
+
+            Convert temperature values accurately between
+            Celsius, Fahrenheit, and Kelvin.
+
+        </p>
+
+    </div>
+
+    <!-- ================= RIGHT SECTION ================= -->
+
+    <div class="right">
+
+        <h2>Convert Temperature</h2>
+
+        <!-- Temperature Input -->
+
+        <div class="input-group">
+
+            <label for="temp">
+
+                Enter Temperature
+
+            </label>
+
+            <input
+                type="number"
+                id="temp"
+                step="any"
+                placeholder="e.g. 25">
+
+        </div>
+
+        <!-- Unit Selection -->
+
+        <div class="input-group">
+
+            <label for="fromUnit">
+
+                Select Unit
+
+            </label>
+
+            <select id="fromUnit">
+
+                <option value="C">
+
+                    Celsius (°C)
+
+                </option>
+
+                <option value="F">
+
+                    Fahrenheit (°F)
+
+                </option>
+
+                <option value="K">
+
+                    Kelvin (K)
+
+                </option>
+
+            </select>
+
+        </div>
+
+        <!-- Error Message -->
+
+        <p id="error"></p>
+
+        <!-- Buttons -->
+
+        <div class="buttons">
+
+            <button onclick="convertTemperature()">
+
+                Convert
+
+            </button>
+
+            <button
+                class="reset-btn"
+                onclick="resetFields()">
+
+                Reset
+
+            </button>
+
+        </div>
+
+        <!-- Result -->
+
+        <div class="result">
+
+            <h3>Converted Values</h3>
+
+            <p id="celsius">
+
+                Celsius : --
+
+            </p>
+
+            <p id="fahrenheit">
+
+                Fahrenheit : --
+
+            </p>
+
+            <p id="kelvin">
+
+                Kelvin : --
+
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
