@@ -1,6 +1,4 @@
 
-// Convert Temperature
-
 function convertTemperature() {
 
     const tempInput = document.getElementById("temp");
@@ -15,15 +13,10 @@ function convertTemperature() {
 
     const kelvin = document.getElementById("kelvin");
 
-    // Clear previous error
-
     error.textContent = "";
-
-    // Read input value
 
     const temperature = parseFloat(tempInput.value);
 
-    // Validate input
 
     if (tempInput.value.trim() === "" || isNaN(temperature)) {
 
@@ -37,8 +30,6 @@ function convertTemperature() {
 
         return;
     }
-
-    // Absolute Zero Validation
 
     if (
         (unit === "C" && temperature < -273.15) ||
@@ -59,8 +50,6 @@ function convertTemperature() {
     }
 
     let c;
-
-    // Convert to Celsius first
 
     switch (unit) {
 
@@ -84,13 +73,9 @@ function convertTemperature() {
 
     }
 
-    // Convert to all units
-
     const f = (c * 9 / 5) + 32;
 
     const k = c + 273.15;
-
-    // Display Results
 
     celsius.textContent =
         "Celsius : " + c.toFixed(2) + " °C";
@@ -102,9 +87,6 @@ function convertTemperature() {
         "Kelvin : " + k.toFixed(2) + " K";
 
 }
-
-
-// Reset Function
 
 function resetFields() {
 
